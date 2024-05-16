@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@font-face {
+    font-family: weathericons;
+    src: url(../fonts/weathericons-regular-webfont.ttf);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #ececec;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    /*background-image: url("../backgrounds/day/0.jpg");*/
+    background-clip: content-box;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.search > input {
+    display: block;
+    flex-grow: 1;
+    flex-basis: auto;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: #ffffff;
+}
+
+.weather {
+    margin-left: 15px;
+    margin-right: 15px;
+    display: none;
+}
+
+.container {
+    background-color: #0000001f;
+    backdrop-filter: blur(50px);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.2s;
+    color: #ffffff;
+}
+
+.container:hover {
+    box-shadow: 0px 0px 15px 7px rgba(0,0,0,0.1);
+    transition: 0.2s;
+    cursor: default;
+}
+
+.now {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.weather-icon-now {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    text-align: center;
+}
+
+.weather-info-now {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    margin-left: 20px;
+}
+
+#temp-in {
+    font-size: 64px;
+}
+
+#low-temp-in, #high-temp-in {
+    padding-right: 10px;
+}
+
+.weather-icon-now > .icon {
+    font-size: 128px;
+}
+
+.icon {
+    font-family: weathericons;
+}
+
+.daily > table, .hourly > table {
+    width: 100%;
+}
+
+.daily .weather-icon, .hourly .weather-icon {
+    font-size: 25px;
+}
+
+.daily, .hourly {
+    text-align: center;
+    overflow-y: auto;
+}
+
+#cities {
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 999;
+    border-radius: 10px;
+    padding: 5px;
+    display: none;
+}
+
+.city {
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+.city:hover {
+    background-color: #dbdada;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.hourly th, .hourly tr, .daily th, .daily tr {
+    padding: 0px 15px 0px 15px;
+}
+
+
